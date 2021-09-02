@@ -39,6 +39,7 @@ function iniciaCronometro() {
         campo.attr("disabled", true);
         clearInterval(idCronometro);
         $("#botao-reiniciar").attr("disabled", false);
+        inserePlacar();
       }
     }, 1000);
   });
@@ -57,6 +58,15 @@ function iniciaMarcadores() {
       campo.removeClass("campo-correto");
     }
   })
+}
+
+function inserePlacar(){
+  var corpoTabela = $(".placar").find("tbody");
+  var usuario = "Beatriz";
+  var numPalavras = $("#contador-palavras").text();
+
+  var linha = "<tr>" + "<td>" + usuario + "</td>" + "<td>" + numPalavras + "</td>" + "</tr>";
+  corpoTabela.prepend(linha);
 }
 
 function reiniciaJogo() {
