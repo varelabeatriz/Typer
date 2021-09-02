@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1, p{
+    text-align: center;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+}
+
+.game textarea.campo-digitacao{
+    width: 700px;
+    margin-bottom: 10px;
+}
+
+textarea:focus{
+    outline: none !important;
+}
+
+.campo-correto{
+    border: 2px solid green;
+}
+
+.campo-errado{
+    border: 2px solid red;
+}
+
+.game textarea:disabled{
+    background-color: rgb(209, 209, 209);
+}
+

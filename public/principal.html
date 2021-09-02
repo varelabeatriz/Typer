@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Typer</title>
 </head>
+
 <body>
-    <h1>Typer</h1>
-    <p class="text">Lorem ipsum dolor sit amet, consectur adipisicing</p>
+    <div class="container">
+        <h1>Typer</h1>
+        <p class="text">Lorem ipsum dolor sit amet, consectur adipisicing</p>
 
-    <ul class="info">
-        <li><span id="textSize">5</span> words</li>
-        <li><span id="tempo-digitacao">10</span> seconds</li>
-    </ul>
+        <ul class="info">
+            <li><span id="textSize">5</span> words</li>
+            <li><span id="tempo-digitacao">10</span> seconds</li>
+        </ul>
 
-    <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
-    <button id="botao-reiniciar">Reiniciar Jogo</button>
+        <div class="game">
+            <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
+            <div class="controls">
+                <button id="botao-reiniciar">Reiniciar Jogo</button>
+            </div>
+        </div>
 
-    <ul class="info">
-        <li><span id="contador-caracteres">0</span> caracteres</li>
-        <li><span id="contador-palavras">0</span> palavras</li>
-    </ul>
+        <ul class="info">
+            <li><span id="contador-caracteres">0</span> caracteres</li>
+            <li><span id="contador-palavras">0</span> palavras</li>
+        </ul>
+    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
-   
+
 </body>
+
 </html>

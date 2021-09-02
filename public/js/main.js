@@ -1,10 +1,11 @@
 var tempoInicial = $("#tempo-digitacao").text();
 var campo = $(".campo-digitacao");
 
-$(function(){
+$(function () {
   atualizaTamanhoFrase();
   iniciaContadores();
   iniciaCronometro();
+  iniciaMarcadores();
   $("#botao-reiniciar").on("click", reiniciaJogo);
 })
 
@@ -43,13 +44,30 @@ function iniciaCronometro() {
   });
 }
 
-function reiniciaJogo(){
-    campo.attr("disabled", false);
-    campo.val("");
-    $("#contador-palavras").text("0");
-    $("#contador-caracteres").text("0");
-    $("#tempo-digitacao").text(tempoInicial);
-    iniciaCronometro();
+function iniciaMarcadores() {
+  var frase = $(".text").text();
+  campo.on("input", function () {
+    var digitado = campo.val();
+    var comparavel = frase.substr(0, digitado.length);
+    if (digitado == comparavel) {
+      campo.addClass("campo-correto");
+      campo.removeClass("campo-errado");
+    } else {
+      campo.addClass("campo-errado");
+      campo.removeClass("campo-correto");
+    }
+  })
+}
+
+function reiniciaJogo() {
+  campo.attr("disabled", false);
+  campo.val("");
+  $("#contador-palavras").text("0");
+  $("#contador-caracteres").text("0");
+  $("#tempo-digitacao").text(tempoInicial);
+  iniciaCronometro();
+  campo.removeClass("campo-correto");
+  campo.removeClass("campo-errado");
 }
 
 
