@@ -60,39 +60,6 @@ function iniciaMarcadores() {
   })
 }
 
-function inserePlacar() {
-  var corpoTabela = $(".placar").find("tbody");
-  var usuario = "Beatriz";
-  var numPalavras = $("#contador-palavras").text();
-
-  var linha = novaLinha(usuario, numPalavras);
-  linha.find(".botao-remover").on("click", removeLinha)
-
-  corpoTabela.prepend(linha);
-}
-
-function novaLinha(usuario, palavras) {
-  var linha = $("<tr>");
-  var colunaUsuario = $("<td>").text(usuario);
-  var colunaPalavras = $("<td>").text(palavras);
-  var colunaRemover = $("<td>");
-
-  var link = $("<a>").addClass("botao-remover").attr("href", "#");
-  link.text("remover");
-
-  colunaRemover.append(link);
-  linha.append(colunaUsuario);
-  linha.append(colunaPalavras);
-  linha.append(colunaRemover);
-
-  return linha;
-}
-
-function removeLinha() {
-  event.preventDefault();
-  $(this).parent().parent().remove();
-}
-
 $(".botao-remover").on("click", function(event){
   event.preventDefault();
   $(this).parent().parent().remove();
