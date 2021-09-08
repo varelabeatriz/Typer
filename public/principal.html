@@ -13,6 +13,11 @@
         <p>Digite o texto abaixo e compare sua velocidade de digitação:</p>
         <p class="text">Lorem ipsum dolor sit amet, consectur adipisicing</p>
 
+        <div>
+            <img src="img/spinner.gif" alt="Carregando" id="spinner">
+            <p id="erro">Ocorreu um erro. Por favor, tente novamente.</p>
+        </div>
+
         <ul class="info">
             <li><span id="textSize">5</span> words</li>
             <li><span id="tempo-digitacao">10</span> seconds</li>
@@ -21,8 +26,9 @@
         <div class="game">
             <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
             <div class="controls">
-            <button id="botao-reiniciar">Reiniciar Jogo</button>
-            <button id="botao-placar">Placar</button>
+                <button id="botao-reiniciar">Reiniciar Jogo</button>
+                <button id="botao-placar">Placar</button>
+                <button id="botao-frase">Trocar Frase</button>
             </div>
         </div>
 
@@ -55,6 +61,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
     <script src="js/placar.js"></script>
+    <script src="js/frase.js"></script>
 
 </body>
 

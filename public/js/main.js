@@ -9,6 +9,11 @@ $(function () {
   $("#botao-reiniciar").on("click", reiniciaJogo);
 })
 
+function atualizaTempoInicial(tempo) {
+  tempoInicial = tempo;
+  $("#tempo-digitacao").text(tempo);
+}
+
 function atualizaTamanhoFrase() {
   var frase = $(".text").text();
   var numPalavras = frase.split(" ").length;
@@ -29,8 +34,8 @@ function iniciaContadores() {
 }
 
 function iniciaCronometro() {
-  var tempoRestante = $("#tempo-digitacao").text();
   campo.one("focus", function () {
+    var tempoRestante = $("#tempo-digitacao").text();
     $("#botao-reiniciar").attr("disabled", true);
     var idCronometro = setInterval(function () {
       tempoRestante--;
@@ -46,8 +51,8 @@ function iniciaCronometro() {
 }
 
 function iniciaMarcadores() {
-  var frase = $(".text").text();
   campo.on("input", function () {
+    var frase = $(".text").text();
     var digitado = campo.val();
     var comparavel = frase.substr(0, digitado.length);
     if (digitado == comparavel) {
@@ -60,7 +65,7 @@ function iniciaMarcadores() {
   })
 }
 
-$(".botao-remover").on("click", function(event){
+$(".botao-remover").on("click", function (event) {
   event.preventDefault();
   $(this).parent().parent().remove();
 })

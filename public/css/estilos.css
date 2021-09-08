@@ -64,3 +64,11 @@ textarea:focus{
     flex-direction: column;
 }
 
+#erro{
+    display: none;
+}
+
+#spinner{
+    display: none;
+}
+
