@@ -3,7 +3,7 @@ $("#botao-sync").on('click', sincronizaPlacar);
 
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Beatriz";
+    var usuario = $("#usuarios").val();
     var numPalavras = $("#contador-palavras").text();
 
     var linha = novaLinha(usuario, numPalavras);
@@ -77,6 +77,7 @@ function atualizaPlacar(){
         $(data).each(function(){
             var linha = novaLinha(this.usuario, this.pontos);
             linha.find(".botao-remover").on("click", removeLinha)
+
             $("tbody").append(linha);
         });
     });
