@@ -20,7 +20,7 @@ function atualizaTempoInicial(tempo) {
 }
 
 function atualizaTamanhoFrase() {
-  var frase = $(".text").text();
+  var frase = $("#text").text();
   var numPalavras = frase.split(" ").length;
   var tamanhoFrase = $("#textSize");
   tamanhoFrase.text(numPalavras);
@@ -57,7 +57,7 @@ function iniciaCronometro() {
 
 function iniciaMarcadores() {
   campo.on("input", function () {
-    var frase = $(".text").text();
+    var frase = $("#text").text();
     var digitado = campo.val();
     var comparavel = frase.substr(0, digitado.length);
     if (digitado == comparavel) {
@@ -76,6 +76,8 @@ $(".botao-remover").on("click", function (event) {
 })
 
 function reiniciaJogo() {
+  sincronizaPlacar();
+  fraseAleatoria();
   campo.attr("disabled", false);
   campo.val("");
   $("#contador-palavras").text("0");

@@ -9,10 +9,25 @@
 </head>
 
 <body>
+
+    <h1>Typer</h1>
+    <p>Digite o texto abaixo e compare sua velocidade de digitação:</p>
+
     <div class="container">
-        <h1>Typer</h1>
-        <p>Digite o texto abaixo e compare sua velocidade de digitação:</p>
-        <p class="text">Lorem ipsum dolor sit amet, consectur adipisicing</p>
+
+        <div class="select-usuarios">
+            <select id="usuarios">
+                <option value="Beatriz">Beatriz</option>
+                <option value="Adriana">Adriana</option>
+                <option value="Gabriel">Gabriel</option>
+            </select>
+        </div>
+
+        <div class="text-container">
+            <img src="img/papiro.png" alt="">
+            <p class="text" id="text">To be, or not to be: that is the question: Whether ’tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles, And by opposing end them. To die: to sleep...
+            </p>
+        </div>
 
         <div>
             <img src="img/spinner.gif" alt="Carregando" id="spinner">
@@ -21,24 +36,16 @@
 
         <ul class="info">
             <li><span id="textSize">5</span> words</li>
-            <li><span id="tempo-digitacao">10</span> seconds</li>
+            <li><span id="tempo-digitacao">22</span> seconds</li>
         </ul>
 
         <div class="game">
-            <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
+            <textarea class="campo-digitacao" cols="40" rows="8" placeholder="Start typing..."></textarea>
             <div class="controls">
                 <button id="botao-reiniciar">Reiniciar Jogo</button>
                 <button id="botao-placar">Placar</button>
-                <button id="botao-frase">Trocar Frase</button>
-                <button id="botao-sync">Sincronizar com o servidor</button>
             </div>
-            <div class="select-usuarios">
-                <select id="usuarios">
-                    <option value="Beatriz">Beatriz</option>
-                    <option value="Adriana">Adriana</option>
-                    <option value="Gabriel">Gabriel</option>
-                </select>
-            </div>
+          
         </div>
 
         <ul class="info">
@@ -57,11 +64,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Beatriz</td>
-                        <td>10</td>
-                        <td><a href="#" class="botao-remover">❌</a></td>
-                    </tr>
+                   
                 </tbody>
             </table>
         </section>

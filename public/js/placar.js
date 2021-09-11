@@ -1,5 +1,5 @@
 $("#botao-placar").on('click', mostraPlacar);
-$("#botao-sync").on('click', sincronizaPlacar);
+// $("#botao-sync").on('click', sincronizaPlacar);
 
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
