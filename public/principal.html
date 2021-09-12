@@ -11,7 +11,7 @@
 <body>
 
     <h1>Typer</h1>
-    <p>Digite o texto abaixo e compare sua velocidade de digitação:</p>
+    <p>Type the text below the faster you can</p>
 
     <div class="container">
 
@@ -25,7 +25,9 @@
 
         <div class="text-container">
             <img src="img/papiro.png" alt="">
-            <p class="text" id="text">To be, or not to be: that is the question: Whether ’tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles, And by opposing end them. To die: to sleep...
+            <p class="text" id="text">To be, or not to be: that is the question: Whether ’tis nobler in the mind to
+                suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles, And by
+                opposing end them. To die: to sleep...
             </p>
         </div>
 
@@ -35,36 +37,41 @@
         </div>
 
         <ul class="info">
-            <li><span id="textSize">5</span> words</li>
-            <li><span id="tempo-digitacao">22</span> seconds</li>
+            <!--  <li><span id="textSize">5</span> words</li> -->
+           
         </ul>
 
         <div class="game">
             <textarea class="campo-digitacao" cols="40" rows="8" placeholder="Start typing..."></textarea>
+            <a href="#" class="restart" id="botao-reiniciar">
+                <img src="img/restart.png" alt="restart">
+            </a>
             <div class="controls">
-                <button id="botao-reiniciar">Reiniciar Jogo</button>
-                <button id="botao-placar">Placar</button>
+                <!-- <button id="botao-reiniciar">Reiniciar Jogo</button> -->
+                <p><span id="tempo-digitacao">22</span> seconds</p>
+                <p><span id="contador-caracteres">0</span> caracteres</p>
+                <p><span id="contador-palavras">0</span> words</p>
+                
             </div>
-          
+
         </div>
 
         <ul class="info">
-            <li><span id="contador-caracteres">0</span> caracteres</li>
-            <li><span id="contador-palavras">0</span> palavras</li>
+            <button id="botao-placar">Scoreboard</button>
         </ul>
 
         <section class="placar">
-            <h3>🏆 Placar</h3>
+            <h3>🏆 Scoreboard</h3>
             <table>
                 <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>Num. Palavras</th>
-                        <th>Remover</th>
+                        <th>Name</th>
+                        <th>Num. Words</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                   
+
                 </tbody>
             </table>
         </section>
